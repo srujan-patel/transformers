@@ -26,19 +26,13 @@ jobs:
       - uses: actions/checkout@v4
 
       # Runs a set of commands using the runners shell
-      - name: Generate SBOM
-        uses: CycloneDX/gh-python-generate-sbom@v2.0.0
-        with:
-          output: ./sbom.xml
-          format: json
-          # Dependency track or AppThreat project id. Either provide the id or the project name and version together
-         # projectId: # optional
-          # Dependency track or AppThreat project name. Default use the repo name
-         # projectName: # optional
-          # Dependency track or AppThreat project version. Default repo branch
-          #projectVersion: # optional
-          # Dependency track or AppThreat server url. Eg: https://deptrack.appthreat.io
-          #serverUrl: # optional
-          # Dependency track or AppThreat server api key. Use secrets to inject this value
-          #apiKey: # optional
-   
+    #  - name: Generate SBOM
+     #   uses: CycloneDX/gh-python-generate-sbom@v2.0.0
+      #  with:
+       #   output: ./sbom.xml
+        #  format: json
+
+      - name: Run ORT
+  # You may pin to the exact commit or the version.
+  # uses: edulix/ort-action@648aaed2a4ed2a0306a2d2c19559ee69b8c17777
+        uses: edulix/ort-action@v0.1.2
