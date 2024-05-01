@@ -32,9 +32,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Generate SBOM
         uses: CycloneDX/cdxgen-action@v1.0.0
-        with:
+       # with:
     # Output file for bom.xml. Default console
-          output: bom.xml
+         # output: bom.xml
           # Dependency track or AppThreat project id. Either provide the id or the project name and version together
          # projectId: # optional
           # Dependency track or AppThreat project name. Default use the repo name
